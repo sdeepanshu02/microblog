@@ -41,3 +41,6 @@ if not app.debug:
     app.logger.info('microblog startup')
 
 from app import views, models
+
+from .momentjs import momentjs
+app.jinja_env.globals['momentjs'] = momentjs
